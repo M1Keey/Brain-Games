@@ -1,0 +1,19 @@
+env:
+  node: true
+  es2020: true
+
+extends:
+  - airbnb-base
+
+parserOptions:
+  ecmaVersion: 13
+  sourceType: module
+
+rules: 
+  no-concole: 0
+  import/extensions: 0
+  indent: [2, "tab", {
+         "SwitchCase": 1,
+         "VariableDeclarator": 1  
+  }]
+  no-tabs: 0
