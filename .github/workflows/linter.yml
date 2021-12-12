@@ -1,4 +1,4 @@
-name: 'lint my project'
+name: lint my project
 on:
   push:
   pull-request:
