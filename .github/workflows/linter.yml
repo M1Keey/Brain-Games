@@ -9,7 +9,7 @@ jobs:
    steps:
      - uses: action/checout@v2
      - uses: action/setup-node@v1
-       name = setup node
+     - name = setup node
          with:
          node-version: '14.x'
      - name: install
