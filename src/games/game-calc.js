@@ -6,18 +6,18 @@ const operations = ['+', '-', '*'];
 const getRoundGenerator = () => {
   const firstNum = makeRandom(20, 1);
   const secondNum = makeRandom(20, 1);
-  const operation = makeRandom(operations.length, 0);
+  const operation = makeRandom(operations.length, 1);
   const question = `${firstNum} ${operations[operation]} ${secondNum}`;
   let correctAnswer;
   switch (operations[operation]) {
     case '+':
-      correctAnswer = String(firstNum + secondNum);
+      correctAnswer = (firstNum + secondNum);
       break;
     case '-':
-      correctAnswer = String(firstNum - secondNum);
+      correctAnswer = (firstNum - secondNum);
       break;
     case '*':
-      correctAnswer = String(firstNum * secondNum);
+      correctAnswer = (firstNum * secondNum);
       break;
     default:
       break;
