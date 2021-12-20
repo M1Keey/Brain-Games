@@ -1,6 +1,8 @@
 #Makefile
 install: #installing dependencies
 	npm ci
+brain-prime: #running brain-prime.js
+	node bin/brain-prime.js
 brain-progression: #running brain-progression.js
 	node bin/brain-progression.js
 brain-gcd: #running brain-gcd.js
