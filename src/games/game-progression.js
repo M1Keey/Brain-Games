@@ -18,7 +18,7 @@ const getRoundGenerator = () => {
   const progression = makeProgression(firstItem, step);
   const correctAnswer = progression[index];
   progression[index] = '..';
-  const question = progression;
+  const question = progression.join(' ');
   return [question, correctAnswer];
 };
 export { rules, getRoundGenerator };
