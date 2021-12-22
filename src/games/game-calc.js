@@ -20,7 +20,7 @@ const getRoundGenerator = () => {
       correctAnswer = String(firstNum * secondNum);
       break;
     default:
-      throw new Error(`Operation ${operation} is not supported`);
+      throw new Error(`Operation ${operations[operation]} is not supported`);
   }
   return [question, correctAnswer];
 };
