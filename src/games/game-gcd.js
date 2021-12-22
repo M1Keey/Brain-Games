@@ -14,13 +14,13 @@ const gcd = (first, second) => {
     if (a < b) {
       b %= a;
     }
-  } return String(a + b);
+  } return a + b;
 };
 const getRoundGenerator = () => {
   const firstNum = makeRandom(50, 1);
   const secondNum = makeRandom(50, 1);
   const question = `${firstNum} ${secondNum}`;
-  const correctAnswer = gcd(firstNum, secondNum);
+  const correctAnswer = String(gcd(firstNum, secondNum));
   return [question, correctAnswer];
 };
 

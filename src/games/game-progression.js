@@ -16,7 +16,7 @@ const getRoundGenerator = () => {
 
   const index = makeRandom(10, 0);
   const progression = makeProgression(firstItem, step);
-  const correctAnswer = progression[index];
+  const correctAnswer = String(progression[index]);
   progression[index] = '..';
   const question = progression.join(' ');
   return [question, correctAnswer];

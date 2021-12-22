@@ -11,16 +11,16 @@ const getRoundGenerator = () => {
   let correctAnswer;
   switch (operations[operation]) {
     case '+':
-      correctAnswer = (firstNum + secondNum);
+      correctAnswer = String(firstNum + secondNum);
       break;
     case '-':
-      correctAnswer = (firstNum - secondNum);
+      correctAnswer = String(firstNum - secondNum);
       break;
     case '*':
-      correctAnswer = (firstNum * secondNum);
+      correctAnswer = String(firstNum * secondNum);
       break;
     default:
-      break;
+      throw new Error(`Operation ${operation} is not supported`);
   }
   return [question, correctAnswer];
 };
