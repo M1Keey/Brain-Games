@@ -1,24 +1,35 @@
+import gameLogic from '../index.js';
 import makeRandom from '../random.js';
 
 const rules = 'What number is missing in the progression?';
 
+const progressionLength = 9;
+const minItemValue = 1;
+const maxItemValue = 20;
+const minStepValue = 1;
+const maxStepValue = 6;
+const minIndexValue = 0;
+const maxIndexValue = progressionLength + 1;
+
 const makeProgression = (firstItem, step) => {
   const progression = [];
   progression.push(firstItem);
-  for (let i = 0; i < 9; i += 1) {
+  for (let i = 0; i < progressionLength; i += 1) {
     progression.push(progression[i] + step);
   } return progression;
 };
 
 const getRoundGenerator = () => {
-  const firstItem = makeRandom(20, 1);
-  const step = makeRandom(6, 1) + 1;
+  const firstItem = makeRandom(maxItemValue, minItemValue);
+  const step = makeRandom(maxStepValue, minStepValue) + minStepValue;
 
-  const index = makeRandom(10, 0);
+  const randomIndex = makeRandom(maxIndexValue, minIndexValue);
   const progression = makeProgression(firstItem, step);
-  const correctAnswer = String(progression[index]);
-  progression[index] = '..';
+  const correctAnswer = String(progression[randomIndex]);
+  progression[randomIndex] = '..';
   const question = progression.join(' ');
   return [question, correctAnswer];
 };
-export { rules, getRoundGenerator };
+const progressionGame = () => gameLogic(rules, getRoundGenerator);
+
+export default progressionGame;

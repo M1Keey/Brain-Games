@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { rules, getRoundGenerator } from '../src/games/game-even.js';
-import gameLogic from '../src/index.js';
+import evenGame from '../src/games/game-even.js';
 
-gameLogic(rules, getRoundGenerator);
+evenGame();

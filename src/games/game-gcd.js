@@ -1,6 +1,10 @@
+import gameLogic from '../index.js';
 import makeRandom from '../random.js';
 
 const rules = 'Find the greatest common divisor of given numbers.';
+const minNumValue = 1;
+const maxNumValue = 50;
+
 const gcd = (first, second) => {
   let a = first;
   let b = second;
@@ -17,11 +21,12 @@ const gcd = (first, second) => {
   } return a + b;
 };
 const getRoundGenerator = () => {
-  const firstNum = makeRandom(50, 1);
-  const secondNum = makeRandom(50, 1);
+  const firstNum = makeRandom(maxNumValue, minNumValue);
+  const secondNum = makeRandom(maxNumValue, minNumValue);
   const question = `${firstNum} ${secondNum}`;
   const correctAnswer = String(gcd(firstNum, secondNum));
   return [question, correctAnswer];
 };
+const gcdGame = () => gameLogic(rules, getRoundGenerator);
 
-export { rules, getRoundGenerator };
+export default gcdGame;

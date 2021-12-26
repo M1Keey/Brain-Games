@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { rules, getRoundGenerator } from '../src/games/game-prime.js';
-import gameLogic from '../src/index.js';
+import primeGame from '../src/games/game-prime.js';
 
-gameLogic(rules, getRoundGenerator);
+primeGame();

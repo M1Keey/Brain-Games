@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-import { rules, getRoundGenerator } from '../src/games/game-gcd.js';
-import gameLogic from '../src/index.js';
+import gcdGame from '../src/games/game-gcd.js';
 
-gameLogic(rules, getRoundGenerator);
+gcdGame();
