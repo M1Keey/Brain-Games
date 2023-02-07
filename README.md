@@ -1,5 +1,5 @@
 [![Actions Status](https://github.com/M1Keey/frontend-project-lvl1/workflows/Tests/badge.svg)](https://github.com/M1Keey/frontend-project-lvl1/actions)
-[![Actions Status](https://github.com/M1Keey/frontend-project-lvl1/workflows/ESLint/badge.svg)](https://github.com/M1Keey/frontend-project-lvl1/actions)
+[![ESLint](https://github.com/M1Keey/Brain-Games/actions/workflows/ESLint_check.yml/badge.svg)](https://github.com/M1Keey/Brain-Games/actions/workflows/ESLint_check.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/0dd0d3377ffd8c10cf7a/maintainability)](https://codeclimate.com/github/M1Keey/frontend-project-lvl1/maintainability)
 
 ---
